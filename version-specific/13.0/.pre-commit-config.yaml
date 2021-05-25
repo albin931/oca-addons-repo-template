@@ -27,7 +27,7 @@ repos:
         entry: found forbidden files; remove them
         language: fail
         files: "\\.rej$"
-  - repo: https://github.com/oca/maintainer-tools
+  - repo: https://github.com/albin931/maintainer-tools
     rev: ab1d7f6
     hooks:
       # update the NOT INSTALLABLE ADDONS section above
