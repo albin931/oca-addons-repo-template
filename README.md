@@ -31,10 +31,12 @@ pipx ensurepath
 copier copy https://github.com/albin931/oca-addons-repo-template.git some-repo
 # Commit that
 cd some-repo
+git init
 git add .
 pre-commit install
 pre-commit run -a
-git commit -am 'Hello world 🖖'
+#If there is any Failed status, do git add . and pre-commit run -a
+git commit -am 'First pre-commit run'
 ```
 
 Quick answer to update a repo:
