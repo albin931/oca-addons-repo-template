@@ -45,7 +45,7 @@ jobs:
             hashFiles('pyproject.toml') }} ${{ hashFiles('poetry.lock') }}
       - run: poetry install
 
-      # Let tests issue git comAGPL-3s
+      # Let tests issue git commits
       - run: git config --global user.name CI
       - run: git config --global user.email CI@GITHUB
 

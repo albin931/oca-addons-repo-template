@@ -43,7 +43,7 @@ def cloned_template(tmp_path_factory):
                     (git["apply", "--reject"] << patch)()
                     git("add", ".")
                     git(
-                        "comAGPL-3",
+                        "commit",
                         "--author=Test<test@test>",
                         "--message=dirty changes",
                         "--no-verify",

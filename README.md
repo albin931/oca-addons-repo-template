@@ -23,20 +23,18 @@ Quick answer to bootstrap a new repo:
 ```bash
 python3 -m pip install --user pipx
 export PATH="${PATH}:$(python3 -c 'import site; print(site.USER_BASE)')/bin"
-# Install copier and pre-comAGPL-3 if missing
+# Install copier and pre-commit if missing
 pipx install copier
-pipx install pre-comAGPL-3
+pipx install pre-commit
 pipx ensurepath
 # Clone this template and answer its questions
 copier copy https://github.com/albin931/oca-addons-repo-template.git some-repo
-# ComAGPL-3 that
+# Commit that
 cd some-repo
-git init
 git add .
-pre-comAGPL-3 install
-pre-comAGPL-3 run -a
-# If some Failed status comes, Do git add . and pre-comAGPL-3 run -a
-git comAGPL-3 -am 'First pre-comAGPL-3 run'
+pre-commit install
+pre-commit run -a
+git commit -am 'Hello world 🖖'
 ```
 
 Quick answer to update a repo:
@@ -46,11 +44,11 @@ Quick answer to update a repo:
 cd some-repo
 copier update
 # Reformat updated files
-pre-comAGPL-3 run
-# ComAGPL-3 update
-git comAGPL-3 -am 'Updated from template'
-# Reformat all other files, in case some pre-comAGPL-3 configuration was updated
-pre-comAGPL-3 run -a || git comAGPL-3 -am 'Reformatted after template update'
+pre-commit run
+# Commit update
+git commit -am 'Updated from template'
+# Reformat all other files, in case some pre-commit configuration was updated
+pre-commit run -a || git commit -am 'Reformatted after template update'
 ```
 
 ## How to contribute?
@@ -75,7 +73,7 @@ terms this template is not meant to support being used as is for other organizat
 
 Copyright holder: [Odoo Community Association](https://odoo-community.org/).
 
-Template license: [AGPL-3](LICENSE)
+Template license: [MIT](LICENSE)
 
 License of the rendered repositories: [AGPL](LICENSE.jinja)
 
