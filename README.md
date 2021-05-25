@@ -21,12 +21,14 @@ to read its docs to know how it works.
 Quick answer to bootstrap a new repo:
 
 ```bash
+python3 -m pip install --user pipx
+export PATH="${PATH}:$(python3 -c 'import site; print(site.USER_BASE)')/bin"
 # Install copier and pre-commit if missing
 pipx install copier
 pipx install pre-commit
 pipx ensurepath
 # Clone this template and answer its questions
-copier copy https://github.com/OCA/oca-addons-repo-template.git some-repo
+copier copy https://github.com/albin931/oca-addons-repo-template.git some-repo
 # Commit that
 cd some-repo
 git add .
